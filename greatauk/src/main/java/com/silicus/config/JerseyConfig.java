@@ -4,7 +4,7 @@ import javax.ws.rs.ApplicationPath;
 
 import org.glassfish.jersey.server.ResourceConfig;
 /**
- * Swagger configurations for REST apis
+ * Swagger configurations for REST APIs
  * @author SMurmu
  *
  */
