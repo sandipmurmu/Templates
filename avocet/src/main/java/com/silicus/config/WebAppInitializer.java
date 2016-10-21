@@ -1,0 +1,27 @@
+package com.silicus.config;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+
+public class WebAppInitializer implements WebApplicationInitializer {
+
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		//create applicationContext
+		AnnotationConfigWebApplicationContext webapCtx
+		= new AnnotationConfigWebApplicationContext();
+		webapCtx.register(AvocetConfig.class);
+		webapCtx.setServletContext(servletContext);
+		servletContext.addListener(new ContextLoaderListener(webapCtx));
+		
+		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(webapCtx));
+		servlet.setLoadOnStartup(1);
+		servlet.addMapping("/");
+	}
+	
+}
