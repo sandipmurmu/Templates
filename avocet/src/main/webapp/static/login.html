@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Angular JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src ="components/userController.js"></script>
+</head>
+
+<body ng-app="kycmodule">
+<div ng-controller="loginController">
+	<div class="container">
+	 <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">     
+	   <div class="panel panel-info">
+			<div class="panel-heading">Sign In</div>
+				<div class="panel-body">
+					<div>
+						<form id="loginform">
+							<div class="form-group">
+						        <label for="userId">Username</label>
+						        <input type="email" class="form-control" id="userId" ng-model="user.username" placeholder="Username">
+						    </div>
+						    <div class="form-group">
+						        <label for="passwordId">Password</label>
+						        <input type="password" class="form-control" id="passwordId" ng-model="user.password" placeholder="Password">
+						    </div>
+						    <button type="submit" class="btn btn-primary" ng-click="checklogin();">Login</button>
+						 </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+</body>
+
+</html>
+
+
+
+<!-- <data-ng-form name="loginForm" class=""> 
+ <div class="container"> 
+ 	data-ng-controller="loginController"> 
+ 	<div class="login"> 
+ 		<div class="login-panel"> 
+ 			<h3 class="login-heading">SIGN IN</h3> 
+ 			<h4>Username</h4> 
+ 			<div class="form-group"> 
+ 				<input type="text" name=username class="form-control" id="username" 
+ 					data-ng-model="user.username" /> 
+ 			</div> 
+ 			<h4>Password</h4> 
+ 			<div class="form-group"> 
+ 				<input type="password" name="password" class="form-control" 
+ 					id="password" data-ng-model="user.password" /> 
+ 			</div> 
+ 			<div class="text-center"> 
+ 				<button type="submit" class="btn btn-primery btn-sign" 
+ 					data-ng-click="login()">Next</button> 
+ 			</div> 
+ 
+ 
+ 		</div> 
+ 	</div> 
+ </div> 
+ </data-ng-form> 
+ -->

@@ -7,4 +7,6 @@ import com.silicus.model.User;
 public interface UserService {
 
 	public List<User> getUsers();
+	
+	public User login();
 }

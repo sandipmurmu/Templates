@@ -28,4 +28,16 @@ public class UserWebService {
 		return userservice.getUsers();
 		
 	}
+	
+	
+	@RequestMapping(
+			value="/security_login",
+			method=RequestMethod.POST,
+			consumes ="application/json"
+			)
+	@ResponseBody 
+	public User login(){
+		return userservice.login();
+	}
+	
 }

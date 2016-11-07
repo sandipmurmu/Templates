@@ -18,6 +18,7 @@ public class AvocetConfig extends WebMvcConfigurerAdapter {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// TODO Auto-generated method stub
 		registry.addResourceHandler("/**").addResourceLocations("/static/");
+		
 	}
 	
 }

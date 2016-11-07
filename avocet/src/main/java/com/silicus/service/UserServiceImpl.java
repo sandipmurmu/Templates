@@ -30,4 +30,11 @@ public class UserServiceImpl implements UserService {
 		return this.users;
 	}
 
+	
+	@Override
+	public User login() {
+		// TODO Auto-generated method stub
+		return this.getUsers().get(0);
+	}
+	
 }
