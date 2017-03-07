@@ -14,8 +14,6 @@ public class LoadSetup {
 	
 	public LoadSetup() {
 		system = ActorSystem.create("loadGen");
-		
-		//final ActorRef appManager = system.actorOf(Props.create(JobControllerActor.class, no_of_msgs ),"jobController");
 		ActorRef appManager = system.actorOf(Props.create(JobControllerActor.class, no_of_msgs), "jobController");
 		router = system.actorOf(new RoundRobinPool(5).props(Props.create(WorkerActor.class, appManager)),"workerRouter");
 		
