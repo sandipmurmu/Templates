@@ -1,0 +1,33 @@
+= API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+
+== Customer APIs
+
+===  POST request to create customer
+
+==== Request fields
+
+include::{snippets}/create-customer-test/request-fields.adoc[]
+
+==== Example request
+
+include::{snippets}/create-customer-test/http-request.adoc[]
+
+
+==== Response fields
+
+include::{snippets}/create-customer-test/response-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/create-customer-test/http-response.adoc[]
+
+==== CURL request
+
+include::{snippets}/create-customer-test/curl-request.adoc[]
