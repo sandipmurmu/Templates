@@ -42,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.text.AbstractDocument.Content;
+
 
 import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
 import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
@@ -91,7 +91,6 @@ public class CustomerWebServiceTest {
 	
 	
 	@Test
-	@SuppressWarnings("deprecation")
 	public void createCustomerTest() throws Exception{
 		Map<String, String> req = new HashMap<>();
 		req.put("first_name", "sandip");
@@ -101,7 +100,7 @@ public class CustomerWebServiceTest {
 		Map<String,String> resp = new HashMap<>();
 		resp.put("customer_id", "2");
 		
-		this.documentHandler.snippets(
+		/*this.documentHandler.snippets(
 				requestFields(
 						fieldWithPath("first_name").description("first name of customer"),
 						fieldWithPath("last_name").description("last name of customer"),
@@ -110,11 +109,8 @@ public class CustomerWebServiceTest {
 			), 
 			responseFields(
 					fieldWithPath("customer_id").description("customer id created")
-					
 			)
-		);
-		
-		
+		);*/
 		
 		
 		
@@ -123,10 +119,17 @@ public class CustomerWebServiceTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .content(this.objectMapper.writeValueAsString(req))
                 .contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated());
-				
-				
-		
+				.andExpect(status().isCreated())
+				.andDo(this.documentHandler.document( requestFields(
+						fieldWithPath("first_name").description("first name of customer"),
+						fieldWithPath("last_name").description("last name of customer"),
+						fieldWithPath("gender").description("either male, female, others")
+						),
+						responseFields(
+								fieldWithPath("customer_id").description("customer id created")
+				)));
 	}
+	
+	
 	
 }

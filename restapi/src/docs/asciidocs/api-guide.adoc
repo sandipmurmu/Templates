@@ -7,9 +7,9 @@
 :sectlinks:
 
 
-== Customer APIs
+== Customer
 
-===  POST request to create customer
+===  Create Customer
 
 ==== Request fields
 
