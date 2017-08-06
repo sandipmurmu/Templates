@@ -11,18 +11,13 @@
 
 ===  Create Customer
 
-==== Request fields
+==== Request
 
 include::{snippets}/create-customer-test/request-fields.adoc[]
 
 ==== Example request
 
 include::{snippets}/create-customer-test/http-request.adoc[]
-
-
-==== Response fields
-
-include::{snippets}/create-customer-test/response-fields.adoc[]
 
 ==== Example response
 
@@ -31,3 +26,76 @@ include::{snippets}/create-customer-test/http-response.adoc[]
 ==== CURL request
 
 include::{snippets}/create-customer-test/curl-request.adoc[]
+
+
+
+===  Get Customer
+
+==== Request
+
+include::{snippets}/get-customer-test/path-parameters.adoc[]
+
+==== Example request
+
+include::{snippets}/get-customer-test/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/get-customer-test/response-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/get-customer-test/http-response.adoc[]
+
+==== CURL request
+
+include::{snippets}/get-customer-test/curl-request.adoc[]
+
+
+
+===  Get List
+This is hyermedia api. *HATEAOS*. 
+
+==== Request
+
+No request parameters required
+
+==== Example request
+
+include::{snippets}/get-list-test/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/get-list-test/response-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/get-list-test/http-response.adoc[]
+
+==== CURL request
+
+include::{snippets}/get-list-test/curl-request.adoc[]
+
+
+===  Get Page
+
+==== Request
+
+include::{snippets}/get-page-test/path-parameters.adoc[]
+
+==== Example request
+
+include::{snippets}/get-page-test/http-request.adoc[]
+
+==== Response
+
+include::{snippets}/get-page-test/response-fields.adoc[]
+
+==== Example response
+
+include::{snippets}/get-page-test/http-response.adoc[]
+
+==== CURL request
+
+include::{snippets}/get-page-test/curl-request.adoc[]
+
