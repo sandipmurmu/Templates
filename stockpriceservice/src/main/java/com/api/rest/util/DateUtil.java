@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class DateUtil {
 
-	public DateUtil() {
+	private DateUtil() {
 		// TODO Auto-generated constructor stub
 	}
 	
