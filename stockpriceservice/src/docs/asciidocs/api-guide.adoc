@@ -1,0 +1,19 @@
+= API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+
+== Stock Price
+
+===  Get Stock Price
+
+==== Request
+
+include::{snippets}/get-price-test/request-fields.adoc[]
+
+
+
